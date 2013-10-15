@@ -1,0 +1,2 @@
+1) allow extra information to be added to images
+2) allow placement of images to be rearranged

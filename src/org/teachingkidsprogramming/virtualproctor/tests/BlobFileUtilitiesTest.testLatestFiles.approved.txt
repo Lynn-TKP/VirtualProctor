@@ -1,0 +1,16 @@
+file[0] = BlobFile [
+  key=null
+  creation=1/1/70 12:03 AM
+  creationHandle=null
+  fileName=2
+  contentType=null
+  size=0
+]
+file[1] = BlobFile [
+  key=null
+  creation=1/1/70 12:05 AM
+  creationHandle=null
+  fileName=1
+  contentType=null
+  size=0
+]

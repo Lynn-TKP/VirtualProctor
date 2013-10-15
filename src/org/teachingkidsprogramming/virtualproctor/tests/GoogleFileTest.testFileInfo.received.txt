@@ -1,0 +1,8 @@
+BlobFile [
+  key=-1862mDZGktWEhdgvitNow
+  creation=3/8/12 5:12 AM
+  creationHandle=writable:fIWUtESzMHfo-KJxTG3B7Q
+  fileName=3.png
+  contentType=image/png
+  size=1,228
+]

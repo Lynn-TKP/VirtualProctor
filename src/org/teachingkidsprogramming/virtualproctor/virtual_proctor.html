@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.9.1.js">
+		</script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js">
+		</script>
+
+ <style>
+  .div { width: 150px; height: 150px; padding: 0.5em; }
+  </style>
+		<script>
+  var data = {"dateTime":"01/01/01","images":{"0":{"fileName":"llewellyns computer","imageUrl":"http://docs.python.org/3/_images/turtle-star.png"},"1":{"fileName":"lynns computer","imageUrl":"http://nebomusic.net/jesRainbowExample.png"},"length":2}};
+
+$( document ).ready(function() {
+  for(var i = 0; i < data.images.length; i++)
+  {
+    var image = data.images[i];
+	var html = '<div id="'+image.fileName+'" class="ui-widget-content" ><img src="' + image.imageUrl + '"><p contenteditable="true">' + image.fileName +'</p></div> &nbsp;' ;
+	$( ".inner" ).append(html );
+   } 
+    $("div").draggable();
+});
+    </script>
+	</head>
+	<body class="inner">
+        &nbsp;
+		</body>
+	</html>
