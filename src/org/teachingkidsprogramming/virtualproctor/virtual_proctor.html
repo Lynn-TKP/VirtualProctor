@@ -9,20 +9,30 @@
   .div { width: 150px; height: 150px; padding: 0.5em; }
   </style>
 		<script>
-  var data = {"dateTime":"01/01/01","images":{"0":{"fileName":"llewellyns computer","imageUrl":"http://docs.python.org/3/_images/turtle-star.png"},"1":{"fileName":"lynns computer","imageUrl":"http://nebomusic.net/jesRainbowExample.png"},"length":2}};
+  var data = {"dateTime":"2013-10-15T21:54:48.477Z","images":{"0":{"fileName":"llewellyns computer","imageUrl":"http://docs.python.org/3/_images/turtle-star.png"},"1":{"fileName":"lynns computer","imageUrl":"http://nebomusic.net/jesRainbowExample.png"},"length":2}};
 
 $( document ).ready(function() {
-  for(var i = 0; i < data.images.length; i++)
-  {
-    var image = data.images[i];
-	var html = '<div id="'+image.fileName+'" class="ui-widget-content" ><img src="' + image.imageUrl + '"><p contenteditable="true">' + image.fileName +'</p></div> &nbsp;' ;
-	$( ".inner" ).append(html );
-   } 
-    $("div").draggable();
+	for(var i = 0; i < data.images.length; i++)
+	{
+		var image = data.images[i];
+		var html = '<div id="'+image.fileName+'" class="ui-widget-content" ><img src="' + image.imageUrl + '"><p contenteditable="true">' + image.fileName +'</p></div> &nbsp;' ;
+		$( ".inner" ).append(html );
+	} 
+	$("div").draggable();
+	
 });
+	function updateTime(){
+		var loaded=new Date(data.dateTime);
+		var now=new Date(); 
+		var seconds=Math.round((now.getTime()-loaded.getTime())/1000);
+		$("#timer").html('last loaded ' + seconds + ' second ago');
+	}
+	setInterval(updateTime, 600);
     </script>
 	</head>
 	<body class="inner">
         &nbsp;
+<div id="timer">
+</div>
 		</body>
 	</html>
