@@ -4,6 +4,7 @@
 
 *.pydevproject
 .metadata
+war/WEB-INF/classes
 bin/
 tmp/
 *.tmp

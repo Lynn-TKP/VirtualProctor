@@ -6,8 +6,8 @@ import java.util.Map;
 import junit.framework.TestCase;
 
 import org.approvaltests.Approvals;
-import org.approvaltests.UseReporter;
 import org.approvaltests.reporters.DiffReporter;
+import org.approvaltests.reporters.UseReporter;
 import org.jrack.JRack;
 import org.jrack.RackEnvironment;
 import org.jrack.RackResponse;
