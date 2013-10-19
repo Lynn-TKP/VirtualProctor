@@ -31,12 +31,12 @@ public class VirtualProctorViewerRack implements JRack
     html = StringUtils.stripWhiteSpace(html);
     return RackResponseUtils.standardHtml(html);
   }
-  private BlobFile[] getAllImagesFromCache()
+  public static BlobFile[] getAllImagesFromCache()
   {
     removeOldFiles();
     return UploadImageRack.uploadedFiles.values().toArray(new BlobFile[0]);
   }
-  public void removeOldFiles()
+  public static void removeOldFiles()
   {
     Date tenMinutesAgo = tenMinutesAgo();
     if (lastTimeChecked.before(tenMinutesAgo))

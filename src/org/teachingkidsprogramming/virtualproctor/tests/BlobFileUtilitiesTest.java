@@ -7,8 +7,11 @@ import java.util.List;
 import junit.framework.TestCase;
 
 import org.approvaltests.Approvals;
+import org.approvaltests.reporters.DiffReporter;
+import org.approvaltests.reporters.UseReporter;
 import org.teachingkidsprogramming.virtualproctor.BlobFileUtilities;
 
+@UseReporter(DiffReporter.class)
 public class BlobFileUtilitiesTest extends TestCase
 {
   public void testLatestFiles() throws Exception

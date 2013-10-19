@@ -7,6 +7,7 @@
 
  <style>
   .div { width: 150px; height: 150px; padding: 0.5em; }
+  img { border: 1px solid #999999;}
   </style>
 		<script>
 	var lastLoad = new Date();
@@ -16,10 +17,11 @@
 		for(var i = 0; i < data.images.length; i++)
 		{
 			var image = data.images[i];
-			var element = $("#"+image.fileName);
+            var id = "id" + image.fileName.hashCode();
+			var element = $("#"+id);
 			if(element.length == 0)
 			{
-				var html = '<div id="'+image.fileName+'" class="ui-widget-content" ><img src="' + image.imageUrl + '"height=20 width=20><p contenteditable="true">' + image.fileName +'</p></div> &nbsp;' ;
+				var html = '<div id="'+id+'" class="ui-widget-content" ><img src="' + image.imageUrl + '"><p contenteditable="true">' + image.fileName +'</p></div> &nbsp;' ;
 				$( ".inner" ).append(html );
 			}
 			else
@@ -29,6 +31,16 @@
 		} 
 		$("div").draggable();
 	}
+    String.prototype.hashCode = function(){
+    var hash = 0, i, char;
+    if (this.length == 0) return hash;
+    for (i = 0, l = this.length; i < l; i++) {
+        char  = this.charCodeAt(i);
+        hash  = ((hash<<5)-hash)+char;
+        hash |= 0; // Convert to 32bit integer
+    }
+    return hash;
+};
 	function updateTime()
 	{
 		var now=new Date(); 
