@@ -4,6 +4,10 @@ function processImages(data) {
 	lastLoad = new Date();
 	var xSpace = 250;
 	var xBorder = 20;
+	var ySpace = 225;
+	var yBorder = 20;
+	var columns = Math.floor( $(window).width() / xSpace);
+	
 	for ( var i = 0; i < data.images.length; i++) {
 		var image = data.images[i];
 		var id = "id" + image.fileName.hashCode();
@@ -16,8 +20,10 @@ function processImages(data) {
 			$(".inner").append(html);
 			var box = $("#" + id)[0];
 			box.style.position = "absolute";
-			box.style.left = (xBorder + totalCount * xSpace) + 'px';
-			box.style.top = '50px';
+			var xPos = totalCount % columns;
+			var yPos = Math.floor(totalCount / columns);
+			box.style.left = (xBorder + (xPos * xSpace)) + 'px';
+			box.style.top = (yBorder +(yPos * ySpace))+'px';
 			totalCount++;
 		} else {
 			element.find("img").attr("src", image.imageUrl);

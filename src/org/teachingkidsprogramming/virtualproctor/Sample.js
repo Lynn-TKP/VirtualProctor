@@ -8,6 +8,30 @@ function loadData() {
 		}, {
 			fileName : 'llewellyn',
 			imageUrl : image
+		}, {
+			fileName : 'person3',
+			imageUrl : image
+		}, {
+			fileName : 'person4',
+			imageUrl : image
+		}, {
+			fileName : 'person5',
+			imageUrl : image
+		}, {
+			fileName : 'person6',
+			imageUrl : image
+		}, {
+			fileName : 'person7',
+			imageUrl : image
+		}, {
+			fileName : 'person8',
+			imageUrl : image
+		}, {
+			fileName : 'person9',
+			imageUrl : image
+		}, {
+			fileName : 'person10',
+			imageUrl : image
 		} ]
 	});
 }
